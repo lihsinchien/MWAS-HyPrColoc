@@ -987,7 +987,7 @@ ptm = proc.time();
 res <- hyprcoloc(betas, ses, trait.names=traits, snp.id=rsid, bb.selection = "reg.only", reg.thresh = 0.9);
 proc.time() - ptm;
 #> 使用者   系統   流逝 
-#>   0.01   0.00   0.01
+#>   0.01   0.00   0.02
 res
 #> $results
 #>   iteration              traits posterior_prob regional_prob candidate_snp
@@ -1063,7 +1063,7 @@ ptm = proc.time();
 res = hyprcoloc(betas100, ses100, trait.names = traits100, snp.id = rsid);
 proc.time()-ptm;
 #> 使用者   系統   流逝 
-#>   0.33   0.05   0.37
+#>   0.33   0.08   0.41
 
 # print the number of traits in each cluster
 clusters = which(! is.na(res$results$traits));
@@ -1123,7 +1123,7 @@ ptm = proc.time();
 res = hyprcoloc(betas1000, ses1000, trait.names = traits1000, snp.id = rsid);
 proc.time()-ptm;
 #> 使用者   系統   流逝 
-#>  25.03   7.35  32.44
+#>  25.22   7.17  32.45
 
 # print the number of traits in each cluster
 # print the number of traits in each cluster
@@ -1314,10 +1314,10 @@ res <- hyprcoloc(betas, ses, trait.names=traits, snp.id=rsid);
 time.ind = proc.time() - ptm;
 time.ind;
 #> 使用者   系統   流逝 
-#>   0.01   0.00   0.01
+#>   0.00   0.01   0.01
 time.corr;
 #> 使用者   系統   流逝 
-#>  27.75   0.42  28.19
+#>  33.02   0.37  33.40
 ```
 
 Thus, assuming independence between the studies not only correctly
